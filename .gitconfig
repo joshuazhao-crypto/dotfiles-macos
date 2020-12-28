@@ -3,8 +3,10 @@
 	email = joshua.zhao@crypto.com
 [includeIf "gitdir:~/codes/projects-crypto-com/"]
 	path = ~/codes/projects-crypto-com/.gitconfig
-# [includeIf "gitdir:~/codes/projects-crunchysouldev/"]
-# 	path = ~/codes/projects-crunchysouldev/.gitconfig
+[includeIf "gitdir:~/codes/projects-crunchysouldev/"]
+	path = ~/codes/projects-crunchysouldev/.gitconfig
+[includeIf "gitdir:~/codes/projects-personal/"]
+	path = ~/codes/projects-personal/.gitconfig
 [color]
 	ui = true
 [core]

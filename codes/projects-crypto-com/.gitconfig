@@ -1,4 +1,4 @@
-.gitconfig[user]
+[user]
 	name = Joshua ChenZhao
 	email = joshua.zhao@crypto.com
 [core]

@@ -16,10 +16,10 @@ export ZSH=$HOME/.oh-my-zsh
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 
 ##############################################################################
-# My powerlevel9k Config
+# My powerlevel10k Config
 ##############################################################################
 
-ZSH_THEME="powerlevel9k/powerlevel9k"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 # ZSH_THEME="random"
 # ZSH_THEME="agnoster"
 
@@ -240,7 +240,7 @@ export PATH="$HOME/.fastlane/bin:$PATH"
 export PATH="$HOME/codes/projects-flutter/flutter/bin:$PATH"
 
 # Homebrew
-export HOMEBREW_GITHUB_API_TOKEN=$(security find-generic-password -s 'Homebrew GitHub Token' -w)
+# export HOMEBREW_GITHUB_API_TOKEN=$(security find-generic-password -s 'Homebrew GitHub Token' -w)
 
 # prevent tmux C-d exist
 set -o ignoreeof
@@ -311,7 +311,15 @@ alias ls='lsd'
 alias lsla='ls -la'
 
 alias ts_h='tmuxinator start handdii'
+alias ts_c='tmuxinator start crypto-ops'
+
+alias to_monaco_staging='ssh -L 5433:rds-monaco.monaco-staginga.net:5432 stag-sz-team-bastion'
+alias to_ops_staging='ssh -L 5434:ops-staging-20190404.cqp9slypbmtj.ap-southeast-1.rds.amazonaws.com:5432 stag-sz-team-bastion'
 
 # fzf completion
 # [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export PATH="/usr/local/opt/avr-gcc@8/bin:$PATH"
+export PATH="/usr/local/opt/krb5/bin:$PATH"
+export PATH="/usr/local/opt/krb5/sbin:$PATH"
+export FZF_DEFAULT_COMMAND='ag --files --follow --no-ignore-vcs --hidden -g "!{node_modules/*,.git/*}"'
+

@@ -1,12 +1,6 @@
 "*****************************************************************************
-" Emmet Config:
+" Flutter Config:
 "*****************************************************************************
 
-let g:user_emmet_settings = {
-\  'javascript.jsx' : {
-\      'extends': 'jsx',
-\  },
-\}
-
-" lead key:
-" let g:user_emmet_leader_key=',,'
+" auto hot-reload when dart files:
+let g:flutter_hot_reload_on_save=1

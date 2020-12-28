@@ -16,46 +16,55 @@
 " plugins will be downloaded under the specified directory:
 call plug#begin('~/.vim/plugged')
 
-Plug 'alvan/vim-closetag'
-Plug 'bling/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+" color scheme
+Plug 'chriskempson/base16-vim'
+
+" coc and completion
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+Plug 'neovim/nvim-lspconfig'
+Plug 'nvim-lua/completion-nvim'
+
+" file and git
 Plug 'scrooloose/nerdtree'
-Plug 'guns/xterm-color-table.vim'
 Plug 'xuyuanp/nerdtree-git-plugin'
 Plug 'tpope/vim-fugitive'
-Plug 'lervag/vimtex'
+Plug 'airblade/vim-gitgutter'
+Plug 'majutsushi/tagbar'
+
+" statusbar and buffer
+Plug 'itchyny/lightline.vim'
+Plug 'mengelbrecht/lightline-bufferline'
+Plug 'qpkorr/vim-bufkill'
+
+" editing
+Plug 'easymotion/vim-easymotion'
+Plug 'alvan/vim-closetag'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
 Plug 'vim-scripts/tComment'
 Plug 'tpope/vim-endwise'
-Plug 'rizzatti/dash.vim'
-Plug 'frankier/neovim-colors-solarized-truecolor-only'
-Plug 'overcache/NeoSolarized'
-Plug 'elixir-editors/vim-elixir'
-Plug 'chriskempson/base16-vim'
-Plug 'junegunn/goyo.vim'
-Plug 'junegunn/limelight.vim'
-Plug 'shime/vim-livedown'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'nathanaelkane/vim-indent-guides'
-Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'jeetsukumaran/vim-indentwise'
-Plug 'qpkorr/vim-bufkill'
+Plug 'nathanaelkane/vim-indent-guides'
 Plug 'junegunn/vim-emoji'
-Plug 'diepm/vim-rest-console'
 Plug 'godlygeek/tabular'
-Plug 'airblade/vim-gitgutter'
-Plug 'digitaltoad/vim-pug'
-Plug 'majutsushi/tagbar'
-Plug 'dermusikman/sonicpi.vim'
 Plug 'kristijanhusak/vim-carbon-now-sh'
-Plug 'easymotion/vim-easymotion'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" visual aid
+Plug 'jeffkreeftmeijer/vim-numbertoggle'
+
+" search
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+
 " Filetype:
 " emmet-vim and vim-elixir has conflict, disable
 " Plug 'mattn/emmet-vim'
+Plug 'digitaltoad/vim-pug'
+Plug 'tpope/vim-ragtag'
+Plug 'shime/vim-livedown'
+Plug 'elixir-editors/vim-elixir'
 Plug 'plasticboy/vim-markdown'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'elmcast/elm-vim'
@@ -64,18 +73,15 @@ Plug 'keith/swift.vim'
 Plug 'posva/vim-vue'
 Plug 'vim-ruby/vim-ruby'
 Plug 'hail2u/vim-css3-syntax'
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
 Plug 'tpope/vim-rails'
 Plug 'kchmck/vim-coffee-script'
 Plug 'moll/vim-node'
-Plug 'slashmili/alchemist.vim'
 Plug 'elzr/vim-json'
 Plug 'chrisbra/csv.vim'
 Plug 'dart-lang/dart-vim-plugin'
 Plug 'thosakwe/vim-flutter'
 Plug 'reisub0/hot-reload.vim'
-Plug 'peitalin/vim-jsx-typescript'
+Plug 'maxmellon/vim-jsx-pretty'
 Plug 'amadeus/vim-mjml'
 
 " list ends here. Plugins become visible to Vim after this call:
@@ -83,6 +89,24 @@ call plug#end()
 
 " Plugins - Retired:
 "*****************************************************************************
+" Plug 'chemzqm/vim-jsx-improve'
+" Plug 'peitalin/vim-jsx-typescript'
+" Plug 'frankier/neovim-colors-solarized-truecolor-only'
+" Plug 'overcache/NeoSolarized'
+" Plug 'junegunn/goyo.vim'
+" Plug 'junegunn/limelight.vim'
+" Plug 'mhinz/vim-mix-format'
+" Plug 'bling/vim-bufferline'
+" Plug 'guns/xterm-color-table.vim'
+" Plug 'bling/vim-airline'
+" Plug 'vim-airline/vim-airline-themes'
+" Plug 'slashmili/alchemist.vim'
+" Plug 'diepm/vim-rest-console'
+" Plug 'lervag/vimtex'
+" Plug 'dermusikman/sonicpi.vim'
+" Plug 'pangloss/vim-javascript'
+" Plug 'mxw/vim-jsx'
+" Plug 'rizzatti/dash.vim'
 " Plug 'ryanoasis/vim-devicons'
 " Plug 'ervandew/supertab'
 " Plug 'Valloric/YouCompleteMe'

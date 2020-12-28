@@ -1,7 +1,7 @@
-[user]
+.gitconfig[user]
 	name = Joshua ChenZhao
 	email = joshua.zhao@crypto.com
 [core]
 	excludesfile = ~/.gitignore_global
-	name = Joshua Chenzhao
+	name = Joshua ChenZhao
 	email = joshua.zhao@crypto.com

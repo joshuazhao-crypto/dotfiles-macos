@@ -12,11 +12,10 @@
 " *****************************************************************************
 
 " Elixir:
-autocmd BufWritePost *.ex silent :!mix format %
-autocmd BufWritePost *.exs silent :!mix format %
 autocmd FileType elixir let indentLine_enabled=0
 autocmd FileType elixir let indentLine_leadingSpaceEnabled=0
-" autocmd FileType elixir silent :!mix format %
+" use Coc to autoformat
+" let g:mix_format_on_save = 1
 
 " Elm:
 autocmd FileType elm set tabstop=4            " tab spacing
@@ -41,6 +40,7 @@ autocmd FileType html let indentLine_enabled=0
 " JavaScript:
 autocmd FileType javascript set formatprg=prettier\ --stdin
 autocmd FileType javascript let indent_guides_enable_on_vim_startup=1 "doesn't work somehow
+let g:vim_jsx_pretty_highlight_close_tag = 1
 " autocmd FileType javascript let indentLine_enabled=0
 " autocmd FileType javascript let indentLine_leadingSpaceEnabled=0
 

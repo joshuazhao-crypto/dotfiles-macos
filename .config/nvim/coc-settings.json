@@ -1,6 +1,6 @@
 {
   "languageserver": {
-     "elixirLS": {
+    "elixirLS": {
       "command": "~/codes/projects-elixir/clone/elixir-ls/rel/language_server.sh",
       "filetypes": ["elixir", "eelixir"],
       "settings": {
@@ -8,20 +8,31 @@
           "dialyzerEnabled": false
         }
       }
-     }
+    }
   },
   "snippets.extends": {
     "cpp": ["c"],
     "javascriptreact": ["javascript"],
     "javascript.jsx": ["javascript"],
-    "typescript": ["javascript"]
+    "typescript": ["javascript"],
+    "typescriptreact": ["javascript"]
   },
   "snippets.ultisnips.directories": [
     "UltiSnips",
     "~/.vim/plugged/vim-snippets/snippets"
   ],
-  "coc.preferences.formatOnSaveFiletypes": ["css", "Markdown", "javascript", "javascriptreact", "json", "typescript", "typescript.tsx", "typescriptreact" ],
-  "emmet.includeLanguages": {"javascript.jsx": "javascriptreact"},
+  "coc.preferences.formatOnSaveFiletypes": [
+    "elixir",
+    "css",
+    "Markdown",
+    "javascript",
+    "javascriptreact",
+    "json",
+    "typescript",
+    "typescript.tsx",
+    "typescriptreact"
+  ],
+  "emmet.includeLanguages": { "typescriptreact": "javascriptreact" },
   "tsserver.implicitProjectConfig.experimentalDecorators": true,
   "tsserver.enableJavascript": true,
   "typescript.suggest.completeFunctionCalls": false,
@@ -29,7 +40,5 @@
   "prettier.singleQuote": true,
   "prettier.trailingComma": "all",
   "prettier.arrowParens": "always",
-  "prettier.eslintIntegration": true,
-  "prettier.disableSuccessMessage": true
+  "prettier.eslintIntegration": true
 }
-

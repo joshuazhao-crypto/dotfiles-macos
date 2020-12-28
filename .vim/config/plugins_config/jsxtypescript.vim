@@ -1,12 +1,9 @@
 "*****************************************************************************
-" Emmet Config:
+" JSX TypeScript:
 "*****************************************************************************
 
-let g:user_emmet_settings = {
-\  'javascript.jsx' : {
-\      'extends': 'jsx',
-\  },
-\}
+hi tsxTag guifg=#F99575
+hi tsxTagName guifg=#F99575
+hi tsxCloseString guifg=#F99575
+hi tsxCloseTag guifg=#F99575
 
-" lead key:
-" let g:user_emmet_leader_key=',,'

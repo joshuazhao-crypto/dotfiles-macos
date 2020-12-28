@@ -103,7 +103,7 @@ nnoremap k gk
 
 " Emmet Toggle:
 " map <C-j>, <C-y>,
-map <Leader>[ <C-y>,
+" map <Leader>[ <C-y>,
 " map <C-;>, <C-y>,
 
 " Goyo Toggle:
@@ -146,7 +146,39 @@ nmap m, <Plug>(easymotion-overwin-f2)
 map <Leader>L <Plug>(easymotion-bd-jk)
 nmap <Leader>L <Plug>(easymotion-overwin-line)
 
+" FZF: set \ag to search under cursor
+" nnoremap <silent> <Leader>ag :Ag <C-R><C-W><CR>
+nnoremap <silent> <Leader>ag :Rg <C-R><C-W><CR>
+
+" CtrlP: ctrlp search under cursor
+nmap <silent> <Leader><C-P> :CtrlP<CR><C-\>w
+
+" GoTo code navigation.
 " Coc: Make <c-j> used for trigger completion, completion confirm, snippet expand and jump like VSCode
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  elseif (coc#rpc#ready())
+    call CocActionAsync('doHover')
+  else
+    execute '!' . &keywordprg . " " . expand('<cword>')
+  endif
+endfunction
+
+" Symbol renaming.
+nmap <leader>rn <Plug>(coc-rename)
+
+" Highlight the symbol and its references when holding the cursor.
+autocmd CursorHold * silent call CocActionAsync('highlight')
+
 inoremap <silent><expr> <c-j>
       \ pumvisible() ? coc#_select_confirm() :
       \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
@@ -164,8 +196,14 @@ let g:coc_snippet_next = '<c-j>'
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
-" FZF: set \ag to search under cursor
-nnoremap <silent> <Leader>ag :Ag <C-R><C-W><CR>
+" Add `:Format` command to format current buffer.
+command! -nargs=0 Format :call CocAction('format')
 
-" CtrlP: ctrlp search under cursor
-nmap <silent> <Leader><C-P> :CtrlP<CR><C-\>w
+" Add `:Fold` command to fold current buffer.
+command! -nargs=? Fold :call     CocAction('fold', <f-args>)
+
+" Add `:OR` command for organize imports of the current buffer.
+command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
+
+" remap ragtag trigger
+inoremap <C-;> <C-X><CR>

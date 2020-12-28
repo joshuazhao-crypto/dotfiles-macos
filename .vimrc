@@ -56,7 +56,7 @@ source ~/.vim/config/keymap.vim
 
 " Vim Config - Plugins Specific:
 "*****************************************************************************
-source ~/.vim/config/plugins_config/airline.vim
+source ~/.vim/config/plugins_config/lightline.vim
 source ~/.vim/config/plugins_config/devicons.vim
 source ~/.vim/config/plugins_config/elm.vim
 source ~/.vim/config/plugins_config/emmet.vim
@@ -70,6 +70,8 @@ source ~/.vim/config/plugins_config/tagbar.vim
 source ~/.vim/config/plugins_config/vrc.vim
 source ~/.vim/config/plugins_config/flutter.vim
 source ~/.vim/config/plugins_config/jsxtypescript.vim
+" source ~/.vim/config/plugins_config/airline.vim
+" source ~/.vim/config/lsp/elixir.vim
 " source ~/.vim/config/plugins_config/vimim.vim
 " source ~/.vim/config/plugins_config/ale.vim
 " source ~/.vim/config/plugins_config/ycm.vim

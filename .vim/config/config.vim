@@ -70,7 +70,8 @@ set foldnestmax=10              " 10 nested fold max
 " Auto load view and folder
 " If working dir is wrong, empty .local/share/nvim/view
 autocmd BufWinLeave *.* mkview!
-autocmd BufWinEnter *.* silent! loadview 
+" disbabled seems have issue with lightline first open file not render statusbar
+autocmd BufWinEnter *.* silent! loadview | call lightline#update()
 
 " Not saves vim options
 set viewoptions-=options
@@ -109,9 +110,13 @@ endif
 " https://github.com/coryhouse/react-slingshot#initial-machine-setup
 set backupcopy=yes
 
+" Coc Setup
 " Setup Coc Prettier command
 command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
 
+" Don't pass messages to |ins-completion-menu|.
+" set shortmess+=c
+ 
 "*******************************************************************************
 "" Vim General Config - Issues Remedies:
 " Last Update: 2017-12-13 14:36

@@ -22,8 +22,6 @@ Plug 'chriskempson/base16-vim'
 " coc and completion
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-Plug 'neovim/nvim-lspconfig'
-Plug 'nvim-lua/completion-nvim'
 
 " file and git
 Plug 'scrooloose/nerdtree'
@@ -89,6 +87,8 @@ call plug#end()
 
 " Plugins - Retired:
 "*****************************************************************************
+" Plug 'nvim-lua/completion-nvim'
+" Plug 'neovim/nvim-lspconfig'
 " Plug 'chemzqm/vim-jsx-improve'
 " Plug 'peitalin/vim-jsx-typescript'
 " Plug 'frankier/neovim-colors-solarized-truecolor-only'

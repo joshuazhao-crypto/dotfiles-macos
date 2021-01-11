@@ -1,15 +1,5 @@
 {
-  "languageserver": {
-    "elixirLS": {
-      "command": "~/codes/projects-elixir/clone/elixir-ls/rel/language_server.sh",
-      "filetypes": ["elixir", "eelixir"],
-      "settings": {
-        "elixirLS": {
-          "dialyzerEnabled": false
-        }
-      }
-    }
-  },
+  "elixirLS.dialyzerEnabled": false,
   "snippets.extends": {
     "cpp": ["c"],
     "javascriptreact": ["javascript"],

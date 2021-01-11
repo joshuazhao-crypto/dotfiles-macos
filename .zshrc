@@ -315,6 +315,7 @@ alias ts_c='tmuxinator start crypto-ops'
 
 alias to_monaco_staging='ssh -L 5433:rds-monaco.monaco-staginga.net:5432 stag-sz-team-bastion'
 alias to_ops_staging='ssh -L 5434:ops-staging-20190404.cqp9slypbmtj.ap-southeast-1.rds.amazonaws.com:5432 stag-sz-team-bastion'
+alias to_x_backend_mysql='ssh -L 3307:mysql-main.xdev.local:3306 xdev-bastion'
 
 # fzf completion
 # [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -323,3 +324,9 @@ export PATH="/usr/local/opt/krb5/bin:$PATH"
 export PATH="/usr/local/opt/krb5/sbin:$PATH"
 export FZF_DEFAULT_COMMAND='ag --files --follow --no-ignore-vcs --hidden -g "!{node_modules/*,.git/*}"'
 
+source ~/powerlevel10k/powerlevel10k.zsh-theme
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi

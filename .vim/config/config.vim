@@ -188,15 +188,16 @@ hi Search guibg=Blue guifg=yellow
 
 
 " CtrlP Silver Searcher:
-if executable('ag')
+if executable('rg')
   " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden --ignore .git -g ""' 
+  " let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden --ignore .git -g ""' 
+  let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
 
   " ag is fast enough that CtrlP doesn't need to cache
   let g:ctrlp_use_caching = 0
 
   " Use ag over grep
-  set grepprg=ag\ --nogroup\ --nocolor
+  set grepprg=rg\ --color=never
 endif
 
 " Show hidden files in ctrlp (ag will overread this!)

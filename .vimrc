@@ -70,6 +70,7 @@ source ~/.vim/config/plugins_config/tagbar.vim
 source ~/.vim/config/plugins_config/vrc.vim
 source ~/.vim/config/plugins_config/flutter.vim
 source ~/.vim/config/plugins_config/jsxtypescript.vim
+
 " source ~/.vim/config/plugins_config/airline.vim
 " source ~/.vim/config/lsp/elixir.vim
 " source ~/.vim/config/plugins_config/vimim.vim

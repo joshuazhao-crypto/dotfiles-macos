@@ -79,6 +79,7 @@ Plug 'chrisbra/csv.vim'
 Plug 'dart-lang/dart-vim-plugin'
 Plug 'thosakwe/vim-flutter'
 Plug 'reisub0/hot-reload.vim'
+Plug 'leafgarland/typescript-vim'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'amadeus/vim-mjml'
 
@@ -87,10 +88,11 @@ call plug#end()
 
 " Plugins - Retired:
 "*****************************************************************************
+" Plug 'peitalin/vim-jsx-typescript'
+" Plug 'yuezk/vim-js'
 " Plug 'nvim-lua/completion-nvim'
 " Plug 'neovim/nvim-lspconfig'
 " Plug 'chemzqm/vim-jsx-improve'
-" Plug 'peitalin/vim-jsx-typescript'
 " Plug 'frankier/neovim-colors-solarized-truecolor-only'
 " Plug 'overcache/NeoSolarized'
 " Plug 'junegunn/goyo.vim'
@@ -135,7 +137,6 @@ call plug#end()
 " Plug 'crunchysoul/phoenix.vim'
 " Plug 'tpope/vim-projectionist'
 " Plug 'w0rp/ale'
-" Plug 'leafgarland/typescript-vim'
 " Plug 'ap/vim-css-color'
 " Plug 'baumanno/vim-nerdtree-direnter'
 " Plug 'jistr/vim-nerdtree-tabs'
